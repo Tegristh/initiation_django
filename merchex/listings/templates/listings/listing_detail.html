@@ -2,7 +2,9 @@
 
 {% block content %} 
 
-<h2>{{ listing.id }} {{ listing.name }}</h2>
+<h1>{{ listing.name }}</h1>
+<a href="{% url 'listing-update' listing.id %}">[Modifier]</a>
+<a href="{% url 'listing-delete' listing.id %}">[Supprimer]</a>
 <ul>
     <li>Groupe: {{ listing.band }}</li>
     <li>Type: {{listing.get_type_display }}</li>
